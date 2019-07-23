@@ -8,24 +8,25 @@ namespace Anagram.Tests
     [TestClass]
     public class AnagramTrackerTest
     {
-
         [TestMethod]
         public void Tracker_DeterminesIfAnagram_True()
         {
-            //Arrange
-
-
-
-            //Act
-            // Tracker ("beard", "bread");
-
-
-            //Assert
             Assert.AreEqual(true, AnagramTracker.Tracker("beard", "bread"));
-
         }
 
+        [TestMethod]
+        public void SelectFromList_DeterminesIfAnagramFromList_BreadBared()
+        {
+            // Arrange
+            List<string> possibleAnagrams = new List<string>() {"bread", "banana", "oranges", "bared"};
+            string wordToCompareTo = "beard";
 
+            // Act
+            List<string> result = AnagramTracker.SelectFromList(wordToCompareTo, possibleAnagrams);
+
+            // Assert
+            Assert.AreEqual("bared", result[1]);
+        }
 
     }
 }
