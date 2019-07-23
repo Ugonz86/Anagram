@@ -6,12 +6,15 @@
 
 ## Description
 
-DETAILED DESCRIPTION
+A user input a word and if it's an anagram, the program will return a list of matching words.
 
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **BEHAVIOR** | INPUT | OUTPUT |
+| **The program welcomes the user.**| User starts program. | Welcome to the Anagram Tracker! |
+| **The program compares 2 single words and determines if they are anagrams.**| beard & bread | true |
+| **The program compares 2 single words and determines if they are anagrams.**| car & bread | false |
+| **The program compares more than 2 single words and determines if they are anagrams.**| beard & bread & car | Only beard is an anagram of bread. |
 
 ## Setup/Installation Requirements
 
